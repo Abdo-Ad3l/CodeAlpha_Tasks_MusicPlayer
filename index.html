@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand"
+          ><span class="fa-solid fa-music px-3"></span>Music Player</a
+        >
+        <form class="d-none d-sm-flex" role="search">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+    <div class="wrapper">
+      <div class="overlay"></div>
+      <div class="container h-100">
+        <div class="row d-flex align-items-center h-100">
+          <div class="col-lg-6 col-12">
+            <div class="player text-center mb-5 mt-5">
+              <div class="player-display">
+                <h2 id="player-song-title">Jason Mraz</h2>
+                <span id="player-song-artist">Know</span>
+              </div>
+              <div
+                class="player-content h-100 d-flex justify-content-center align-items-center flex-column"
+              >
+                <div class="player-album-art">
+                  <img
+                    class="img-fluid"
+                    src="imgs/Jason_Mraz_Know.jpg"
+                    alt="Album Art"
+                  />
+                </div>
+                <div
+                  class="player-controls d-flex align-items-center justify-content-center mt-5 pt-3 pb-3"
+                >
+                  <button
+                    class="control-btn me-3"
+                    id="previous"
+                    aria-label="Previous"
+                  >
+                    <i class="fas fa-backward"></i>
+                  </button>
+                  <button class="control-btn me-3" id="play" aria-label="Play">
+                    <i class="fas fa-play"></i>
+                  </button>
+                  <button
+                    class="control-btn me-3"
+                    id="pause"
+                    aria-label="Pause"
+                  >
+                    <i class="fas fa-pause"></i>
+                  </button>
+                  <button class="control-btn me-3" id="next" aria-label="Next">
+                    <i class="fas fa-forward"></i>
+                  </button>
+                  <button class="control-btn" id="shuffle" aria-label="Shuffle">
+                    <i class="fa-solid fa-shuffle"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-12 mt-5">
+            <div class="playlist">
+              <div class="playlist-bar">
+                <h2 class="playlist-title" id="playlist">Know</h2>
+                <span class="pe-3">Jason Mraz</span>
+                <span class="pe-3">2018</span>
+                <span class="pe-3">10 Songs</span>
+              </div>
+              <ul id="playlist-songs"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

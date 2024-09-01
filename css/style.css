@@ -1,0 +1,110 @@
+:root {
+  --background: #edeef7;
+  --gray: #edeef7;
+  --white: #ffffff;
+  --font-family: "Poppins", sans-serif;
+  --shadow-opacity: 0.3;
+  --blur: 10px;
+}
+
+* {
+  box-sizing: border-box;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Kanit", sans-serif;
+}
+
+.wrapper {
+  background-image: url("/imgs/Jason_Mraz_Know.jpg");
+  background-size: cover;
+  height: calc(100vh - 56px);
+  max-width: 100%;
+  position: relative;
+  opacity: 0.9;
+}
+
+@media (max-width: 991px) {
+  .wrapper {
+    height: 100%;
+    padding-bottom: 50px;
+    background-image: none;
+  }
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(var(--blur));
+  filter: drop-shadow(0px 20px 10px rgba(0, 0, 0, var(--shadow-opacity)));
+}
+
+.player-album-art,
+.player-controls {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(var(--blur));
+  filter: drop-shadow(0px 20px 10px rgba(0, 0, 0, var(--shadow-opacity)));
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.control-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+}
+
+#playlist-songs {
+  margin-top: 20px;
+}
+
+#playlist-songs li {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#playlist-songs li button {
+  background-color: transparent;
+  font-size: 17px;
+  border: none;
+  padding: 15px 0 15px;
+}
+
+#playlist-songs li button:first-child {
+  border-bottom: 1px solid var(--background);
+}
+
+#reset {
+  background-color: var(--white);
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-size: 17px;
+  font-weight: 700;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, var(--shadow-opacity));
+}
+
+.player-display {
+  filter: drop-shadow(
+    20px 20px 20px rgba(255, 255, 255, var(--shadow-opacity))
+  );
+  width: 100%;
+  margin: 20px auto;
+}
+
+@media (max-width: 576px) {
+  .playlist {
+    margin: 20px;
+  }
+
+  #playlist-songs li button:first-child {
+    margin-right: 30px;
+  }
+}
